@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: #FDB8A7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #frog {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  #message {
+    font-size: 36px;
+    margin-top: 20px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<img id="frog" src="frog-image-url" alt="Happy Frog">
+<p id="message">Happy Birthday!</p>
+
+<video id="birthday-video" width="640" height="360" controls style="display: none;">
+  <source src="birthday-video-url" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+var frogImage = document.getElementById("frog");
+var message = document.getElementById("message");
+var video = document.getElementById("birthday-video");
+
+frogImage.addEventListener("click", function() {
+  frogImage.style.display = "none";
+  message.style.display = "block";
+  video.style.display = "block";
+  video.play();
+});
+</script>
+
+</body>
+</html>
